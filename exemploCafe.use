@@ -1,0 +1,14 @@
+model Cafe
+
+class CanecaCafe
+attributes
+    qtdAtual: Integer
+    capacidadeMax: Integer
+end
+
+constraints
+
+context CanecaCafe
+    inv: self.qtdAtual >= 0 -- A quantidade de café atual não pode ser negativa
+    inv: self.capacidadeMax >= 0 -- A capacidade máxima de café não pode ser negativa
+    inv: self.qtdAtual <= self.capacidadeMax -- A quantidade atual de café não pode ser maior que a capacidade máxima

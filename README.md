@@ -27,9 +27,10 @@ end -- Fim da classe
 Muitas vezes uma classe herda de outra classe. Isso pode ser especificado da seguinte forma:
 
 ```use
-
+class SegundaClasse:NomeDaClasse
+-- Segue declarando o restante dos atributos e operações da mesma forma que ao declarar uma classe sem herança.
+end
 ```
-
 
 Muitas vezes as classes tem associações entre si, ou até mesmo classes de associação. As associações e classes de associação podem ser especificadas da seguinte forma:
 
@@ -39,7 +40,7 @@ association nomeDaAssociacao between -- associação sem classe
     Classe2[*] role papelDaClasse2
 end
 
-associationclass ClasseAssociacao between
+associationclass ClasseAssociacao between -- associationclass
     Classe3[1] role papelDaClasse3
     Classe4[1..10] role papelDaClasse4
 attributes
@@ -51,7 +52,56 @@ end
 
 ## Para especificar as constraints
 
+Infelizmente, UseOCL não dá suporte às invariantes `def`, `body` ou `derive`, e por isso, serão cobradas apenas `inv`, `pre` e `post`. As constraints devem ser especificadas após o `model` ter sido finalizado e, para separar essa divisão, usa-se a palavra reservada `constraints`:
 
+```use
+model diagramaDeClasses
+
+-- Declaração de diversas classes e associações
+-- Quando as declarações de classe do modelo tiverem encerrado:
+
+constraints
+
+-- A partir desse ponto, declaram-se as constraints
+```
+
+De resto, a sintaxe é idêntica àquela vista em sala. Por exemplo:
+
+```use
+model Cafe
+
+class CanecaCafe
+attributes
+    qtdAtual: Integer
+    capacidadeMax: Integer
+end
+
+constraints
+
+context CanecaCafe
+    inv: self.qtdAtual >= 0 -- A quantidade de café atual não pode ser negativa
+    inv: self.capacidadeMax >= 0 -- A capacidade máxima de café não pode ser negativa
+    inv: self.qtdAtual <= self.capacidadeMax -- A quantidade atual de café não pode ser maior que a capacidade máxima
+```
+
+## Testes de constraints
+
+Para testar se as constraints estão sendo respeitadas, é possível criar objetos, definir propriedades, para em seguida checar as invariantes. Considerando o último exemplo dado acima, temos:
+
+```use
+!create minhaCaneca : CanecaCafe
+!set minhaCaneca.qtdAtual := 100
+!set minhaCaneca.capacidadeMax := 500
+check
+-- O retorno do check das invariantes retornará OK
+
+!create canecaNova : CanecaCafe
+!set canecaNova.qtdAtual := 300
+!set canecaNova.capacidadeMax := 250
+check
+-- O retorno do check das invariantes retornará OK para as duas primeiras invariantes, mas failed para terceira
+
+```
 
 ## Sobre a submissão
 
@@ -59,4 +109,6 @@ end
 
 ## Créditos
 
+A ferramenta UseOCL foi desenvolvida por:
 
+Mark Richters, Martin Gogolla, Joern Bohling, Fabian Buettner, Fabian Gutsche, Hanna Bauerdick, Antje Werner, Jens Bruening, Mirco Kuhlmann, Duc-Hanh Dang, Lars Hamann, Daniel Gent e Frank Hilken.
