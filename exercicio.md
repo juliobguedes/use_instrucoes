@@ -31,8 +31,6 @@ Além dos atributos do diagrama, adicione o atributo `ehSupervisor`, um Boolean,
 
 1. Se um Comissionário é Supervisor, então tem pelo menos 10 anos de serviço.
 
-1. Um Comissário não pode ser seu próprio supervisor.
-
 1. Se em uma Cabine houver mais de 200 assentos, então devem ser designados pelo menos 4 atendentes para atender a cabine.
 
 1. Especifique que os anos de serviço não podem ser inferiores a 0.
