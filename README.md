@@ -105,7 +105,7 @@ check
 
 ## Sobre a submissão
 
-
+Acesse [esse arquivo](exercicio.md) para verificar as especificações do exercício.
 
 ## Créditos
 
