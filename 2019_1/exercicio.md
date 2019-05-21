@@ -28,6 +28,12 @@ Considerando o diagrama acima, implemente-o usando USE, como instruído nos exem
 
 6. Cada grupo deve ter pelo menos 1 administrador, e este administrador deve ser um de seus membros.
 
+7. Um grupo não pode ter mais administradores que membros.
+
+8. Especifique que a função `listarUsuarios()` de uma Conversa retorna os nomes dos usuários.
+
+Já que não é possível utilizar o `def`, modifique o diagrama para incluir a assinatura de função `mensagensEnviadas`, e especifique que deve retornar todas as mensagens enviadas pelo usuário.
+
 ## Diagrama 2
 
 Considerando o diagrama acima, implemente-o usando USE, como instruído nos exemplos do README. Em seguida, especifique as questões:
@@ -53,3 +59,5 @@ Considerando o diagrama acima, implemente-o usando USE, como instruído nos exem
 9. O total de Visualizações de um Album/Single/EP é o total de visualizações de suas músicas.
 
 10. Uma Playlist Colaborativa não pode ser pública, e vice-versa.
+
+11. Especifique que após ouvir uma música, a quantidade de suas visualizações aumentou em 1.
