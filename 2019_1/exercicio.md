@@ -1,6 +1,6 @@
 # Exercício
 
-Abaixo seguem os diagramas de classe e invariantes necessários para o exercício. Ao fim, deve ser enviado para [meu email](julio.costa@ccc.ufcg.edu.br) um conjunto de arquivos `.use`, onde cada um cria um dos diagramas e invariantes aqui explicados. (Um arquivo para o diagrama e invariantes em `Diagrama 1`, outro para `Diagrama 2`, e assim por diante). As dúvidas sobre o exercício podem ser esclarecidas através do mesmo email da submissão ou através do Slack.
+Abaixo seguem os diagramas de classe e invariantes necessários para o exercício. Ao fim, deve ser enviado para [meu email](mailto:julio.costa@ccc.ufcg.edu.br) um conjunto de arquivos `.use`, onde cada um cria um dos diagramas e invariantes aqui explicados. (Um arquivo para o diagrama e invariantes em `Diagrama 1`, outro para `Diagrama 2`, e assim por diante). As dúvidas sobre o exercício podem ser esclarecidas através do mesmo email da submissão ou através do Slack.
 
 A deadline da atividade será especificada pela professora.
 
