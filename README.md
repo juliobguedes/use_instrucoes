@@ -105,7 +105,7 @@ check
 
 ## Sobre a submissão
 
-Acesse [esse arquivo](exercicio.md) para verificar as especificações do exercício.
+Acesse [esse arquivo](2018_2/exercicio.md) para verificar as especificações do exercício.
 
 ## Créditos
 
