@@ -27,7 +27,7 @@ end -- Fim da classe
 Muitas vezes uma classe herda de outra classe. Isso pode ser especificado da seguinte forma:
 
 ```use
-class SegundaClasse:NomeDaClasse
+class SegundaClasse < NomeDaClasse
 -- Segue declarando o restante dos atributos e operações da mesma forma que ao declarar uma classe sem herança.
 end
 ```
