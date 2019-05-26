@@ -18,7 +18,7 @@ Considerando o diagrama acima, implemente-o usando USE, como instruído nos exem
 
 1. O Horario deve ter segundos e minutos entre 0 e 59, e horas entre 0 e 23 (inclusos).
 
-2. A data deve ter dias entre 0 e 31, meses entre 1 e 12, e ano sendo o atual ou algum ano anterior, mas não anterior à 2000 (inclusos).
+2. A data deve ter dias entre 1 e 31, meses entre 1 e 12, e ano sendo o atual ou algum ano anterior, mas não anterior à 2000 (inclusos).
 
 3. Para uma dada conversa, os membros da conversa são diferentes entre si.
 
